@@ -1,0 +1,10 @@
+var express = require('express');
+var router = express.Router();
+var ctrllocator=require('../controller/locator');
+var ctrlothers=require('../controller/others');
+var ctrlsignin=require('../controller/signin');
+router.get('/',ctrllocator.homepage);
+router.get('/location',ctrllocator.locationinfo);
+router.get('/location/review/new',ctrllocator.addReview);
+router.get('/about',ctrlothers.about);
+router.get('/signin',ctrlsignin.signin);
